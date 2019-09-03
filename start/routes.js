@@ -19,3 +19,7 @@ const Route = use('Route')
 Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
+
+//Usuarios
+Route.post('/registrarUsuario', 'UsuarioController.registrarUsuario');
+Route.post('/login', 'UsuarioController.login');
