@@ -23,3 +23,11 @@ Route.get('/', () => {
 //Usuarios
 Route.post('/registrarUsuario', 'UsuarioController.registrarUsuario');
 Route.post('/login', 'UsuarioController.login');
+Route.get('/getUsuario', 'UsuarioController.getUsuario');
+
+//Juego (Partidas y Salas)
+Route.get('/partidas', 'PartidaController.getPartidas');
+Route.get('/crearPartida', 'PartidaController.crearPartida');
+Route.get('/depurar', 'PartidaController.depurarPartidas');
+Route.post('/entrar', 'PartidaController.entrar');
+Route.post('/salir', 'PartidaController.salir');

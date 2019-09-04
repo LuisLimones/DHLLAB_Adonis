@@ -18,6 +18,12 @@ class UsuarioController {
     }
 
     async getUsuario({response, auth}){
+        try {
+            const us = await auth.getUser();
+            return response.json(us);
+        } catch (error) {
+            return response.json(error);
+        }
     }
 
     async login({request, response, auth}){
