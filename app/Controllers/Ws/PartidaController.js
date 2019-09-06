@@ -21,6 +21,10 @@ class PartidaController {
   onGanador(ganador){
     this.socket.broadcast("ganador", ganador);
   }
+
+  onSalir(){
+    this.socket.broadcast("salir");
+  }
 }
 
 module.exports = PartidaController
