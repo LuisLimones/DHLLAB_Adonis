@@ -33,7 +33,9 @@ class PartidaController {
 
     async entrar({request, response}){
         try {
+            console.log("Llega Entrar");
             let id=request.input('id');
+            console.log(id);
             let pa = await Partida.find(id);
             let numero=pa.jugadores;
             if(numero<2){
@@ -46,7 +48,8 @@ class PartidaController {
                 return response.json({condicion: "lleno"});
             }
         } catch (error) {
-            return response.json(error);
+            console.log("valio");
+            return response.json("Valio");
         }
     }
 

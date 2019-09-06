@@ -18,3 +18,7 @@ const Ws = use('Ws')
 Ws.channel('chat:*', 'ChatController')
 
 Ws.channel('usuarios','UsuarioController')
+
+Ws.channel('partida:*', 'PartidaController')
+
+Ws.channel('salas', 'SalasController')
