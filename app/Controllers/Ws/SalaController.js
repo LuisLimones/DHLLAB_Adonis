@@ -5,6 +5,10 @@ class SalaController {
     this.socket = socket
     this.request = request
   }
+
+  onActualizar(partidas){
+    this.socket.broadcast("actualizar", partidas);
+  }
 }
 
 module.exports = SalaController

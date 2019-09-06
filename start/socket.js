@@ -21,4 +21,4 @@ Ws.channel('usuarios','UsuarioController')
 
 Ws.channel('partida:*', 'PartidaController')
 
-Ws.channel('salas', 'SalasController')
+Ws.channel('salas', 'SalaController')

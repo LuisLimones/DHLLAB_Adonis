@@ -31,3 +31,4 @@ Route.get('/crearPartida', 'PartidaController.crearPartida');
 Route.get('/depurar', 'PartidaController.depurarPartidas');
 Route.post('/entrar', 'PartidaController.entrar');
 Route.post('/salir', 'PartidaController.salir');
+Route.post('/partida', 'PartidaController.obtenerPartida');

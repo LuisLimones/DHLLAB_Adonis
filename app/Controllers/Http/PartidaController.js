@@ -22,6 +22,16 @@ class PartidaController {
         }
     }
 
+    async obtenerPartida({request, response}){
+        try {
+            let id = request.input('idPartida');
+            const partida = await Partida.find(id);
+            return response.json(partida);
+        } catch (error) {
+            return response.json(error);
+        }
+    }
+
     async depurarPartidas({response}){
         try {
             await Partida.truncate();
@@ -33,7 +43,6 @@ class PartidaController {
 
     async entrar({request, response}){
         try {
-            console.log("Llega Entrar");
             let id=request.input('id');
             console.log(id);
             let pa = await Partida.find(id);
